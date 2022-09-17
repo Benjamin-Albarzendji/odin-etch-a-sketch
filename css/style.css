@@ -1,0 +1,112 @@
+body {
+  background-color: #181818;
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+
+  gap: 50px;
+}
+
+.header {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+}
+
+.mainContainer {
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+  align-items: center;
+}
+
+.toolContainer {
+  background-color: #202020;
+  padding: 50px;
+  width: 200px;
+  height: 350px;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0px;
+}
+
+.colorPickers {
+  display: flex;
+  flex-direction: column;
+  color: white;
+  align-items: flex-start;
+}
+
+.brusch,
+.background {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  gap: 15px;
+}
+
+#background,
+#brusch {
+  width: 65px;
+  height: 30px;
+  flex-shrink: 0;
+  flex-wrap: nowrap;
+}
+input[type="color"] {
+  -webkit-appearance: none;
+  border: none;
+  width: 32px;
+  height: 32px;
+}
+input[type="color"]::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border: none;
+}
+input[type="color"]::-webkit-color-swatch {
+  border: none;
+}
+
+.slideContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  color: white;
+}
+
+.gridContainer {
+  background-color: white;
+  background-color: white;
+  width: 600px;
+  height: 600px;
+  max-width: 600px;
+  max-height: 600px;
+  border-radius: 3px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.gridObject {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex: 1 1 0;
+  min-width: 0;
+}
+
+.gridCell {
+  display: flex;
+  border: 0.01px solid black;
+  width: 100%;
+  height: 100%;
+}
+
+.gridCell:hover {
+  background-color: rgb(122, 121, 121, 0.4);
+}
