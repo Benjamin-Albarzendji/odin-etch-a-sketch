@@ -2,6 +2,7 @@
 let penColor = "#000000";
 let bgColor = "#FFFFFFF";
 let gridBorder = 1;
+let rbg = 0;
 
 start();
 
@@ -32,6 +33,17 @@ function start() {
   bgColorChange.onchange = function () {
     bgColor = bgColorChange.value;
     newBackground();
+  };
+
+  //Listener for RBG button
+  let rbgButton = document.getElementById("rbg");
+  rbgButton.onclick = function () {
+    rbgButton.classList.toggle("buttonPressed");
+    rbg++;
+    if (rbg > 1) {
+      rbg = 0;
+    }
+    paint();
   };
 
   //Listener for Border Button
@@ -114,8 +126,16 @@ function newGrid(e) {
 }
 
 function paint(e) {
-  e.target.style.backgroundColor = penColor;
-  e.target.classList.add("painted");
+  if (rbg === 0) {
+    e.target.style.backgroundColor = penColor;
+    e.target.classList.add("painted");
+  }
+
+  else{
+
+    e.target.style.backgroundColor = getRandomColor();
+    e.target.classList.add("painted");
+  }
 }
 
 //Adds a new backround while painting
@@ -128,7 +148,13 @@ function newBackground() {
     }
   });
 }
+//Random color function, imported from stackoverflow.
+function getRandomColor() {
 
+    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+}
+
+//Toggles the grid border lines
 function toggleBorder() {
   let borderCells = document.querySelectorAll(".gridCell");
   if (gridBorder === 0) {
