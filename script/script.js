@@ -33,6 +33,13 @@ function start() {
         bgColor = bgColorChange.value
         newGrid()
       }
+
+      //Listener for Clear Button
+      clearBtn = document.getElementById("clear")
+      clearBtn.onclick = function (){
+    newGrid()
+        
+    }
 }
 
 //The grid function
