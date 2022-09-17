@@ -23,14 +23,15 @@ body {
 
 .toolContainer {
   background-color: #202020;
-  padding: 50px;
-  width: 200px;
-  height: 350px;
+  width: 320px;
+  height: 450px;
   border-radius: 3px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 10px;
+  padding: 10px;
   
 }
 
@@ -81,22 +82,24 @@ button {
 width: 250px;
 height: 50px;
   background-color: #202020;
-  border-color: white;
   color: white;
   font-weight: bold;
-  border-radius: 2px;
-  border-width: 1px;
+  border-radius: 30px;
+  
+  border: 3px solid rgba(255, 255, 255, 0.5);
+  
 }
 
 .buttonPressed {
     width: 250px;
     height: 50px;
-      background-color: #FFFFFF;
-      border-color: white;
-      color: #000000;
+      background-color: white;
+      border-color: rebeccapurple;
+      border: transparent;
+      color: black;
       font-weight: bold;
-      border-radius: 2px;
-      border-width: 1px;
+      border-radius: 30px;
+      border-width: 5px
     }
 button:hover{
     scale: 1.05
