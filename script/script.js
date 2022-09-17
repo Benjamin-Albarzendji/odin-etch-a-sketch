@@ -1,6 +1,7 @@
 //Global variables for color choices
 let penColor = "#000000";
 let bgColor = "#FFFFFFF";
+let gridBorder = 1;
 
 start();
 
@@ -33,6 +34,17 @@ function start() {
     newBackground();
   };
 
+  //Listener for Border Button
+  let borderBtn = document.getElementById("toggleBorder");
+  borderBtn.onclick = function () {
+    borderBtn.classList.toggle("buttonPressed");
+    gridBorder++;
+    if (gridBorder > 1) {
+      gridBorder = 0;
+    }
+    toggleBorder();
+  };
+
   //Listener for Clear Button
   let clearBtn = document.getElementById("clear");
   clearBtn.onclick = function () {
@@ -59,6 +71,11 @@ function createGrid(gridX = 16, gridY = 16) {
       let gridCell = document.createElement("div");
       gridCell.className = "gridCell";
       gridCell.style.backgroundColor = bgColor;
+
+      //Checks if the gridValue is 0, deletes border
+      if (gridBorder === 0) {
+        gridCell.id = "noBorder";
+      }
       row.appendChild(gridCell);
     }
   });
@@ -98,7 +115,7 @@ function newGrid(e) {
 
 function paint(e) {
   e.target.style.backgroundColor = penColor;
-  e.target.id = "painted";
+  e.target.classList.add("painted");
 }
 
 //Adds a new backround while painting
@@ -106,8 +123,21 @@ function newBackground() {
   //Changed color of only unpanted cells
   let unpaintedCells = document.querySelectorAll(".gridCell");
   unpaintedCells.forEach((cell) => {
-    if (cell.id !== "painted") {
+    if (!cell.classList.contains("painted")) {
       cell.style.backgroundColor = bgColor;
     }
   });
+}
+
+function toggleBorder() {
+  let borderCells = document.querySelectorAll(".gridCell");
+  if (gridBorder === 0) {
+    borderCells.forEach((cell) => {
+      cell.id = "noBorder";
+    });
+  } else {
+    borderCells.forEach((cell) => {
+      cell.removeAttribute("id");
+    });
+  }
 }
