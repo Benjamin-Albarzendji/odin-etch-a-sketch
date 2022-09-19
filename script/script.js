@@ -129,10 +129,7 @@ function paint(e) {
   if (rbg === 0) {
     e.target.style.backgroundColor = penColor;
     e.target.classList.add("painted");
-  }
-
-  else{
-
+  } else {
     e.target.style.backgroundColor = getRandomColor();
     e.target.classList.add("painted");
   }
@@ -150,8 +147,7 @@ function newBackground() {
 }
 //Random color function, imported from stackoverflow.
 function getRandomColor() {
-
-    return 'hsla(' + (Math.random() * 360) + ', 100%, 50%, 1)';
+  return "hsla(" + Math.random() * 360 + ", 100%, 50%, 1)";
 }
 
 //Toggles the grid border lines
