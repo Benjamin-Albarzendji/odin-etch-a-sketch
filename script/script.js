@@ -16,7 +16,7 @@ function start() {
   gridValue.oninput = function () {
     //Updates the value of the grid slider
     let sliderText = document.getElementById("sliderValue");
-    sliderText.textContent = document.getElementById("slider").value;
+    sliderText.textContent = `${document.getElementById("slider").value} x ${document.getElementById("slider").value}`
 
     //Calls a new grid)
     newGrid();
