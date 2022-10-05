@@ -1,6 +1,6 @@
 # odin-etch-a-sketch
 
-<img src="etch_img.png" alt="drawing" width="500"/>
+<img src="etch_img.png" alt="drawing" width="800"/>
 
 ### Description
 #### This is the the result of my take for the Odin Project "etch-a-sketch" project. 
