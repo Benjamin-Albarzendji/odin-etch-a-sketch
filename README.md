@@ -2,7 +2,7 @@
 
 <img src="etch_img.png" alt="drawing" width="800"/>
 
-### Access [here] (https://benjamin-albarzendji.github.io/odin-etch-a-sketch/)
+### Access [here](https://benjamin-albarzendji.github.io/odin-etch-a-sketch/)
 
 ### Description
 #### This is the the result of my take for the Odin Project "etch-a-sketch" project. 
